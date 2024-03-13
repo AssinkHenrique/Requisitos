@@ -1,4 +1,4 @@
-# 🚀 Especificação do Projeto: Sistema de Transporte Aéreo de Cargas Industriais (STACI) 🛫
+# 🚀 Projeto: Transporte Aéreo de Cargas Industriais 🛫
 
 Esta especificação tem como objetivo definir claramente as funcionalidades e restrições do sistema a ser desenvolvido, o STACI (Sistema de Transporte Aéreo de Cargas Industriais). Destina-se à equipe de desenvolvimento de software e será utilizado e verificado por todas as partes envolvidas na elaboração do sistema. O documento está sujeito a modificações durante sua elaboração até a obtenção da aprovação, momento em que servirá como base para a construção do sistema pela equipe de desenvolvimento.
 
