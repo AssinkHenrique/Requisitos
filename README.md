@@ -1,99 +1,65 @@
-# Requisitos
+# 🚀 Especificação do Projeto: Sistema de Transporte Aéreo de Cargas Industriais (STACI) 🛫
 
-Um parágrafo da descrição do projeto vai aqui
+Esta especificação tem como objetivo definir claramente as funcionalidades e restrições do sistema a ser desenvolvido, o STACI (Sistema de Transporte Aéreo de Cargas Industriais). Destina-se à equipe de desenvolvimento de software e será utilizado e verificado por todas as partes envolvidas na elaboração do sistema. O documento está sujeito a modificações durante sua elaboração até a obtenção da aprovação, momento em que servirá como base para a construção do sistema pela equipe de desenvolvimento.
 
-## 🚀 Começando
+O STACI visa aprimorar a operação atual do sistema, aumentando os benefícios obtidos. Busca controlar todas as operações da transportadora, incluindo registros de aviões, datas e horários de voos, cargas suportadas, fabricantes, manutenções, dados sobre empregados e equipes de manutenção, informações sobre pilotos e modelos de aviões autorizados, entre outros serviços e regras de negócio necessários da GoAir.
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+## 1. Requisitos Funcionais 📋
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+### 1.1 Subsistema: Gerenciar informações de aviões ✈️
 
-### 📋 Pré-requisitos
+| Código | Requisito                                 | Prioridade           |
+|--------|-------------------------------------------|----------------------|
+| RF01   | Cadastro de aviões                         | Essencial            |
+| RF02   | Cadastro de voos                           | Essencial            |
+| RF03   | Cadastro de fabricante                     | Essencial            |
+| RF04   | Cadastro de manutenção                     | Essencial            |
+| RF05   | Listagem de aviões                         | Essencial            |
+| RF06   | Listagem de voos                           | Essencial            |
+| RF07   | Listagem de fabricantes                    | Essencial            |
+| RF08   | Listagem de manutenções                    | Essencial            |
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+### 1.2 Subsistema: Gerenciar informações de empregados 👩‍💼
 
-```
-Dar exemplos
-```
+| Código | Requisito                                 | Prioridade           |
+|--------|-------------------------------------------|----------------------|
+| RF09   | Cadastro de empregados                     | Essencial            |
+| RF10   | Listagem de empregados                     | Essencial            |
 
-### 🔧 Instalação
+### 1.3 Subsistema: Gerenciar informações de pilotos ✈️👨‍✈️
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+| Código | Requisito                                 | Prioridade           |
+|--------|-------------------------------------------|----------------------|
+| RF11   | Cadastro de pilotos                        | Essencial            |
+| RF12   | Cadastro de modelos                        | Essencial            |
+| RF13   | Listagem de pilotos                        | Essencial            |
+| RF14   | Listagem de modelos                        | Essencial            |
+| RF15   | Exclusão de modelos                        | Essencial            |
 
-Diga como essa etapa será:
+## 2. Requisitos Não Funcionais ⚙️
 
-```
-Dar exemplos
-```
+### 2.1 Requisitos de Software 💻
 
-E repita:
+| Requisito           | Descrição                           |
+|---------------------|-------------------------------------|
+| SGBD                | MySQL, versão 8.0 ou superior.      |
+| Linguagem de Programação | Java                            |
 
-```
-Até finalizar
-```
+### 2.2 Requisitos de Segurança 🔐
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+| Requisito           | Descrição                           |
+|---------------------|-------------------------------------|
+| Controle de Acesso  | Controle de acesso por usuário/subsistema. |
 
-## ⚙️ Executando os testes
+## 3. Requisitos de Negócio 💼
 
-Explicar como executar os testes automatizados para este sistema.
+| Código | Requisito                                 | Descrição                                  |
+|--------|-------------------------------------------|--------------------------------------------|
+| RN01   | Manutenção única                          | A manutenção de um avião pode ser realizada somente por uma equipe de cada vez. |
+| RN02   | Carga máxima                              | Os aviões de carga somente realizarão os voos quando possuírem a quantidade de carga para transporte igual a sua carga máxima. |
+| RN03   | Manutenção preventiva                     | Todo avião deve receber uma checagem preventiva todo mês para conferência do seu estado geral. |
 
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Implantação
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
-## 🛠️ Construído com
-
-Mencione as ferramentas que você usou para criar seu projeto
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
+Este documento é uma base inicial e está sujeito a ajustes conforme o desenvolvimento progride. Qualquer alteração será devidamente documentada e submetida à aprovação das partes interessadas.
 
 ---
 ⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
